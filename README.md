@@ -1,5 +1,5 @@
 # Day Planner 
-https://mrcastro7.github.io/DailyPlanner-/
+#https://mrcastro7.github.io/DailyPlanner-/
 
 This simple calender allows the user to save events for each hour of the day. The app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
