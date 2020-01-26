@@ -2,6 +2,26 @@ $(document).ready(function() {
   
     // test flag
     const test = false;
+
+var currentDate = $("#current-date");
+var currentTime = $("#current-time");
+var currentHour = moment();
+var hour = currentHour.format("H");
+var amPm = moment();
+var amOrpm = amPm.format("a");
+
+//Using moment.js to format and display date and time
+setInterval(() => {
+    var dayNow = moment();
+    var timeNow = moment();
+
+    var day = dayNow.format('dddd - MMMM DD, YYYY ');
+    var time = timeNow.format('h:mma');
+
+    currentDate.text(day);
+    currentTime.text(time);
+
+}, 1000);
   
     // get times from moment
     const now = moment().format('MMMM Do YYYY');
@@ -16,8 +36,8 @@ $(document).ready(function() {
       nowHour12 = 1;
     }
   
-    let $dateHeading = $('#navbar-subtitle');
-    $dateHeading.text(now);
+    // let $dateHeading = $('#navbar-subtitle');
+    // $dateHeading.text(now);
     
     // using font awesome icon https://fontawesome.com/license
     // change description here - none
@@ -36,7 +56,7 @@ $(document).ready(function() {
       // this should only occur on first time the app is loaded in the browser
       // helpfully remind user that lunch is important
       planTextArr = new Array(9);
-      planTextArr[4] = "Get ready for GW Coding Bootcamp!";
+    //   planTextArr[4] = "Get ready for GW Coding Bootcamp!";
     }
   
     if (test) { console.log("full array of plned text",planTextArr); }
